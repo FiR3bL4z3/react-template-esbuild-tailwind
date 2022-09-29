@@ -1,34 +1,37 @@
 {
-  "name": "builder",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "esb:d": "node esbuild.config.mjs -w",
-    "esb:b": "node esbuild.config.mjs",
-    "tw:d": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --watch",
-    "tw:b": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css",
-    "build": "run-s esb:b tw:b",
-    "dev": "run-p esb:d tw:d"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "autoprefixer": "^10.4.12",
-    "dotenv": "^16.0.3",
-    "esbuild": "^0.15.10",
-    "esbuild-serve": "^1.0.1",
-    "esbuild-style-plugin": "^1.6.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.1.8"
-  }
+	"name": "builder",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"esb:d": "node esbuild.config.mjs -w",
+		"esb:b": "node esbuild.config.mjs",
+		"tw:d": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --watch",
+		"tw:b": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css",
+		"build": "run-s esb:b tw:b",
+		"dev": "run-p esb:d tw:d",
+		"format": "yarn format:prettier --write",
+		"format:check": "yarn format:prettier --check",
+		"format:prettier": "prettier \"./**/*.{ts,tsx,js,jsx,json,css,md,yml,yaml}\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.21",
+		"@types/react-dom": "^18.0.6",
+		"autoprefixer": "^10.4.12",
+		"dotenv": "^16.0.3",
+		"esbuild": "^0.15.10",
+		"esbuild-serve": "^1.0.1",
+		"esbuild-style-plugin": "^1.6.0",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.7.1",
+		"tailwindcss": "^3.1.8"
+	}
 }
