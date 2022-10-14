@@ -1,5 +1,5 @@
 .env
 yarn.lock
-public/css
-public/js
+public/assets
 node_modules
+meta.json
