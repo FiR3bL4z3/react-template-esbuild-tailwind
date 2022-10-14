@@ -5,12 +5,9 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"esb:d": "node esbuild.config.mjs -w",
-		"esb:b": "node esbuild.config.mjs",
-		"tw:d": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css --watch",
-		"tw:b": "tailwindcss -i ./src/styles.css -o ./public/css/styles.css",
-		"build": "run-s esb:b tw:b",
-		"dev": "run-p esb:d tw:d",
+		"build": "node ./scripts/build.mjs",
+		"dev": "node ./scripts/dev.mjs",
+		"meta": "node ./scripts/build.mjs --meta",
 		"format": "yarn format:prettier --write",
 		"format:check": "yarn format:prettier --check",
 		"format:prettier": "prettier \"./**/*.{ts,tsx,js,jsx,json,css,md,yml,yaml}\""
